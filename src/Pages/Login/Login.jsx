@@ -1,13 +1,33 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 
 
 const Login = () => {
+
+    const { signIn, setLoading } = useContext(AuthContext)
+    const location = useLocation()
+    console.log(location)
+    const navigate = useNavigate()
 
     const handleLogin = e => {
         e.preventDefault()
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password)
+
+
+        signIn(email, password)
+            .then(result => {
+                navigate(location?.state ? location.state : "/")
+                toast.success('User logged Successfully')
+            })
+            .catch(error => {
+                toast.error("Verify Your Email")
+                setLoading(false)
+                e.target.reset()
+            })
     }
 
 
@@ -40,6 +60,7 @@ const Login = () => {
                     <p className="text-center mt-7"><span className="text-base font-semibold text-[#706F6F]">Dont’t Have An Account ? </span><Link className="text-base font-semibold text-[#F75B5F]" to="/register">Register</Link></p>
                 </div>
             </div>
+            <Toaster />
         </div>
     );
 };

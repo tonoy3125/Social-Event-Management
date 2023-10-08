@@ -1,6 +1,13 @@
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { useNavigate } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 
 
 const Register = () => {
+
+    const { createUser, logOut, handleUpdateProfile, setLoading } = useContext(AuthContext);
+    const navigate = useNavigate()
 
     const handleRegister = e => {
         e.preventDefault()
@@ -10,6 +17,34 @@ const Register = () => {
         const password = e.target.password.value;
         const accepted = e.target.terms.checked;
         console.log(name, email, password, photo, accepted)
+
+
+        if (password.length < 6) {
+            toast.error('Password must be at least 6 characters')
+            return
+        }
+        else if (!accepted) {
+            toast.error('Please accepted our terms and condition')
+        }
+
+
+        createUser(email, password)
+            .then(result => {
+                handleUpdateProfile(name, photo)
+                    .then(() => {
+
+                        logOut()
+
+                        navigate("/login")
+                    })
+                toast.success('User Create Successfully')
+
+
+            })
+            .catch(error => {
+                toast.error('Email Already In use try another one')
+                setLoading(false)
+            })
     }
 
 
@@ -45,6 +80,7 @@ const Register = () => {
                     </div>
                 </form>
             </div>
+            <Toaster />
         </div>
     );
 };
