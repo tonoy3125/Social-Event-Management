@@ -1,8 +1,26 @@
 
-
+import avatar from "../../assets/pic/user.png";
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Navbar = () => {
+
+    const { user, logOut, loading } = useContext(AuthContext)
+    console.log(loading)
+    
+
+
+    const handleLogOut = () => {
+        logOut()
+            .then(result => {
+                console.log(result.user)
+            })
+            .then(error => {
+                console.log(error)
+            })
+    }
+
     return (
         <div>
             <div className="navbar bg-base-100 container mx-auto">
@@ -45,11 +63,29 @@ const Navbar = () => {
                         <li className="text-[#232a34] text-lg font-normal"><NavLink className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "text-white bg-[#fcb41e] btn btn-sm font-medium underline" : ""
                         } to="/blog">Blog</NavLink></li>
-                        
+
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to="/login"> <button className="px-5 py-3 rounded-lg bg-[#ff635c] text-white">Login</button></Link>
+                    {
+                        user ? <label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip" data-tip={user.displayName} >
+                            <div className="w-10 h-10 rounded-full">
+                                <img src={user.photoURL} />
+                            </div>
+                        </label>
+                            :
+                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 h-10 rounded-full">
+                                    <img src={avatar} />
+                                </div>
+                            </label>
+                    }
+                    {
+                        user ?
+                            <button onClick={handleLogOut} className="px-5 py-3 rounded-lg bg-[#ff635c] text-white">SignOut</button>
+                            :
+                            <Link to="/login"> <button className="px-5 py-3 rounded-lg bg-[#ff635c] text-white">Login</button></Link>
+                    }
                 </div>
             </div>
         </div>
