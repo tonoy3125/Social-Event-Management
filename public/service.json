@@ -5,7 +5,16 @@
         "image": "https://i.ibb.co/0yfrCS7/prepared-wedding-hall.jpg",
         "price": "20,000",
         "short_description": "Celebrate love and unity in a memorable, enchanting ceremony.",
-        "long_description": "This package includes a luxurious venue with panoramic views, a sumptuous multi-course meal, a premium open bar, and an expert event coordinator to ensure every detail is perfect. Dance the night away with live entertainment in an atmosphere of pure enchantment."
+        "long_description": "Elegance, romance, and memories to last a lifetime - these are the pillars upon which the 'Wedding Charm' event package is built. Designed to transform your special day into an extraordinary affair, this all-inclusive offering is crafted with meticulous attention to detail and a passion for creating moments that will be cherished forever. In the 'Wedding Charm' event package, we don't just create weddings, we craft experiences. Every detail, every moment, and every element is carefully curated to bring your dream wedding to life. With a commitment to excellence and a passion for turning dreams into reality, let us be the architects of your perfect day. Embrace the charm, and let your love story unfold in a celebration that will be remembered for a lifetime.",
+        "details": {
+            "planning": "Wedding Planning",
+            "decoration": "Wedding Decoration",
+            "venue_Selection": "Venue Selection",
+            "catering": "Catering",
+            "services": "BRIDAL & GROOM SERVICES",
+            "hospitality": "Guest Hospitality Management",
+            "others": "Other Event Related Services"
+        }
     },
     {
         "id": "2",
@@ -13,7 +22,16 @@
         "image": "https://i.ibb.co/Mpd8LbW/children-celebrating-birthday.jpg",
         "price": "30,000",
         "short_description": "Whimsical celebration filled with games, cake, and boundless joy.",
-        "long_description": "Celebrate your child's special day with an action-packed superhero adventure! Our package includes superhero costumes, themed decorations, exciting games, and a delicious superhero-themed cake. Your child and their friends will have a blast saving the day!"
+        "long_description": "Unleash your inner hero and embark on an adventure of a lifetime with our 'Superhero Birthday Party' event package! Designed for young heroes and heroines with a passion for saving the day, this package promises an action-packed celebration filled with thrilling activities, dynamic decor, and memories that will be etched in the hearts of your little ones forever.The 'Superhero Birthday Party' event package is more than just a celebration; it's an adventure of a lifetime. With every detail carefully crafted to ignite imaginations and create unforgettable memories, your child's special day will be nothing short of legendary. So, don your capes, gather your team, and get ready for a heroic extravaganza that will leave your young heroes soaring with joy!",
+        "details": {
+            "planning": "Bithday Planning",
+            "decoration": "Birthday Decoration",
+            "venue_Selection": "Venue Selection",
+            "catering": "Catering",
+            "services": "BRIDAL & GROOM SERVICES",
+            "hospitality": "Guest Hospitality Management",
+            "others": "Other Event Related Services"
+        }
     },
     {
         "id": "3",
@@ -21,7 +39,16 @@
         "image": "https://i.ibb.co/0p5p8pQ/elderly-people-celebrating-their-anniversary.jpg",
         "price": "25,000",
         "short_description": "Honoring years of love, laughter, and cherished memories together.",
-        "long_description": "Commemorate 50 years of love and companionship with our elegant Golden Anniversary Celebration. This package includes a beautifully decorated venue, live music, a gourmet dinner, and a special toast to the happy couple. It's a night to remember!"
+        "long_description": "Celebrate the enduring journey of love with our exquisite 'Anniversary Celebration' event package. Crafted for couples who cherish their shared history and look forward to a future filled with even more beautiful moments, this package promises an enchanting evening of romance, elegance, and heartfelt memories.With the 'Anniversary Celebration' event package, we don't just mark the passage of time; we honor the enduring love story that you share. Every element is carefully chosen to create an atmosphere of romance, nostalgia, and anticipation for the wonderful moments that lie ahead. Allow us to be the architects of this beautiful chapter in your journey together. Here's to many more years of love and happiness!",
+        "details": {
+            "planning": "Anniversary Planning",
+            "decoration": "Anniversary Decoration",
+            "venue_Selection": "Venue Selection",
+            "catering": "Catering",
+            "services": "BRIDAL & GROOM SERVICES",
+            "hospitality": "Guest Hospitality Management",
+            "others": "Other Event Related Services"
+        }
     },
     {
         "id": "4",
@@ -29,7 +56,16 @@
         "image": "https://i.ibb.co/6rvcSCf/Engagement-Parties-2.jpg",
         "price": "35,000",
         "short_description": "A promise of forever, sealed with love, cherished together and shared dreams.",
-        "long_description": "Step into a fairytale with our Enchanted Garden Affair. This package includes a whimsical garden venue, floral decor, gourmet dining, and a magical atmosphere that sets the stage for a celebration of love and new beginnings."
+        "long_description": "Step into a world of whimsy and wonder with our 'Enchanted Garden Affair' event package. Tailored for those who seek to immerse themselves in the beauty of nature while celebrating life's special moments, this package promises an enchanting experience amidst lush greenery, vibrant blooms, and the magic of an enchanted garden.With the 'Enchanted Garden Affair' event package, we invite you to step into a world where nature's beauty meets the magic of celebration. Every element is carefully chosen to create an atmosphere of enchantment, weaving a tapestry of memories that will linger in your hearts forever. Let us be the custodians of this enchanted chapter in your journey, where love and nature intertwine in a dance of beauty and wonder.",
+        "details": {
+            "planning": "Engagement Planning",
+            "decoration": "Engagement Decoration",
+            "venue_Selection": "Venue Selection",
+            "catering": "Catering",
+            "services": "BRIDAL & GROOM SERVICES",
+            "hospitality": "Guest Hospitality Management",
+            "others": "Other Event Related Services"
+        }
     },
     {
         "id": "5",
@@ -37,7 +73,16 @@
         "image": "https://i.ibb.co/fYTDcrf/senior-people-celebrating-together.jpg",
         "price": "40,000",
         "short_description": "Celebrating a fulfilling career and embarking on new adventures.",
-        "long_description": "Celebrate a distinguished career with your Classic Retirement Gala. This package includes elegant venue, fine dining, and heartfelt toasts in honor of the retiree. It's a time to reminisce and look forward to new adventures!."
+        "long_description": "Celebrate a lifetime of achievements and embark on a new chapter in style with our 'Classic Retirement Gala' event package. Tailored for individuals who appreciate timeless elegance and the joy of sharing cherished memories, this package promises an unforgettable evening of sophistication, tribute, and the warm embrace of loved ones.With the 'Classic Retirement Gala' event package, we honor a lifetime of accomplishments and set the stage for a new chapter of relaxation and enjoyment. Every element is carefully chosen to create an atmosphere of refined celebration, weaving a tapestry of memories that will linger in your hearts forever. Let us be the custodians of this timeless chapter in your journey, where achievements are celebrated, and new beginnings are embraced with grace and style.",
+        "details": {
+            "planning": "Rirement Party Planning",
+            "decoration": "Party Decoration",
+            "venue_Selection": "Venue Selection",
+            "catering": "Catering",
+            "services": "BRIDAL & GROOM SERVICES",
+            "hospitality": "Guest Hospitality Management",
+            "others": "Other Event Related Services"
+        }
     },
     {
         "id": "5",
@@ -45,6 +90,15 @@
         "image": "https://i.ibb.co/HHrd9S7/side-view-women-gender-reveal-party.jpg",
         "price": "15,000",
         "short_description": "A joyous celebration to welcome and bless the upcoming arrival of a precious little one.",
-        "long_description": "This enchanting event includes a charming venue adorned with baby-themed decor, a delectable spread of treats, fun games, and personalized keepsakes for the parents-to-be. It's a joyful celebration of love and anticipation!."
+        "long_description": "Step into a world of enchantment and joy with our 'Whimsical Baby Wonderland' event package. Tailored for families welcoming their newest member, this package promises a magical celebration filled with delightful decor, playful activities, and cherished moments that will be treasured for a lifetime.With the 'Whimsical Baby Wonderland' event package, we invite you to celebrate the newest addition to your family in a world filled with wonder and delight. Every element is carefully chosen to create an atmosphere of childlike joy, weaving a tapestry of memories that will be treasured by your family for years to come. Let us be the custodians of this magical chapter in your journey, where love and laughter fill the air, and cherished moments abound.",
+        "details": {
+            "planning": "Babyshower Planning",
+            "decoration": "Babyshower Decoration",
+            "venue_Selection": "Venue Selection",
+            "catering": "Catering",
+            "services": "BRIDAL & GROOM SERVICES",
+            "hospitality": "Guest Hospitality Management",
+            "others": "Other Event Related Services"
+        }
     }
 ]
