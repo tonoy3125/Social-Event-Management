@@ -8,7 +8,7 @@ const Navbar = () => {
 
     const { user, logOut, loading } = useContext(AuthContext)
     console.log(loading)
-    
+
 
 
     const handleLogOut = () => {
@@ -68,21 +68,24 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     {
-                        user ? <label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip" data-tip={user.displayName} >
-                            <div className="w-10 h-10 rounded-full">
-                                <img src={user.photoURL} />
-                            </div>
-                        </label>
-                            :
-                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                        user ? <div className="dropdown dropdown-end">
+                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip" >
                                 <div className="w-10 h-10 rounded-full">
-                                    <img src={avatar} />
+                                    <img src={user.photoURL} />
                                 </div>
                             </label>
-                    }
-                    {
-                        user ?
-                            <button onClick={handleLogOut} className="px-5 py-3 rounded-lg bg-[#ff635c] text-white">SignOut</button>
+
+                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg text-black font-bold bg-base-100 rounded-box w-52">
+                                <li className="mb-1">
+                                    <button className="px-5 py-3 rounded-lg bg-[#ff635c] text-white">{user.displayName}</button>
+
+                                </li>
+                                <li>
+                                    <button onClick={handleLogOut} className="px-5 py-3 rounded-lg bg-[#ff635c] text-white">SignOut</button>
+
+                                </li>
+                            </ul>
+                        </div>
                             :
                             <Link to="/login"> <button className="px-5 py-3 rounded-lg bg-[#ff635c] text-white">Login</button></Link>
                     }
@@ -93,3 +96,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
