@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useLoaderData, useParams } from "react-router-dom";
 import { BiDollarCircle } from 'react-icons/bi';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
