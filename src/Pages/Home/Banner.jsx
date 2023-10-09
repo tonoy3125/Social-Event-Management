@@ -16,9 +16,9 @@ const Banner = () => {
     return (
 
         <div className="mt-5">
-            <div className="carousel w-full ">
-                <div id="slide1" className="carousel-item relative w-full ">
-                    <img src={slider1} className="w-full " />
+            <div className="carousel w-full   ">
+                <div id="slide1" className="carousel-item relative w-full">
+                    <img src={slider1} className="w-full  blur-[3px]" />
                     <div data-aos="fade-down"
                         data-aos-easing="linear"
                         data-aos-duration="3000" className="absolute top-7 md:top-28 md:left-32 lg:top-96 lg:left-[700px]">
@@ -32,7 +32,7 @@ const Banner = () => {
                     </div>
                 </div>
                 <div id="slide2" className="carousel-item relative w-full">
-                    <img src={slider2} className="w-full" />
+                    <img src={slider2} className="w-full blur-[3px]" />
                     <div data-aos="fade-down"
                         data-aos-easing="linear"
                         data-aos-duration="3000" className="absolute top-7  md:top-28 md:left-32 lg:top-96 lg:left-[700px]">
@@ -46,7 +46,7 @@ const Banner = () => {
                     </div>
                 </div>
                 <div id="slide3" className="carousel-item relative w-full">
-                    <img src={slider3} className="w-full" />
+                    <img src={slider3} className="w-full blur-[3px]" />
                     <div data-aos="fade-down"
                         data-aos-easing="linear"
                         data-aos-duration="3000" className="absolute top-7  md:top-28 md:left-32 lg:top-96 lg:left-[700px]">
@@ -60,7 +60,7 @@ const Banner = () => {
                     </div>
                 </div>
                 <div id="slide4" className="carousel-item relative w-full">
-                    <img src={slider4} className="w-full" />
+                    <img src={slider4} className="w-full blur-[3px]" />
                     <div data-aos="fade-down"
                         data-aos-easing="linear"
                         data-aos-duration="3000" className="absolute top-7 md:top-28 md:left-32 lg:top-96 lg:left-[700px]">

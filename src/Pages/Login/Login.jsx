@@ -68,7 +68,7 @@ const Login = () => {
     return (
         <div className="bg-[#F3F3F3]">
             <div className="container mx-auto pt-9 pb-[180px]">
-                <div className=" w-[400px] md:w-[752px] h-[700px] mx-auto bg-[#fff] rounded-md pt-10 md:pt-[76px]">
+                <div className=" w-[400px] md:w-[752px] h-[750px] mx-auto bg-[#fff] rounded-md pt-10 md:pt-[76px]">
                     <h1 className=" text-2xl md:text-4xl font-semibold text-center text-[#403F3F] ">Login Your Account</h1>
                     <hr className="md:w-[606px] h-1 mt-7 md:mt-12 mb-7 md:mb-12 mx-auto" />
                     <form onSubmit={handleLogin} className="md:pl-24">
@@ -96,6 +96,15 @@ const Login = () => {
 
                     </form>
                     <p className="text-center mt-7"><span className="text-base font-semibold text-[#706F6F]">Dont’t Have An Account ? </span><Link className="text-base font-semibold text-[#F75B5F]" to="/register">Register</Link></p>
+                    <div className="flex items-center justify-between mt-4">
+                        <span className="w-1/5 border-b dark:border-gray-600 lg:w-1/5"></span>
+
+                        <a href="#" className="text-xs text-center text-gray-500 uppercase dark:text-gray-400 hover:underline">
+                            or login with Social Media
+                        </a>
+
+                        <span className="w-1/5 border-b dark:border-gray-400 lg:w-1/5"></span>
+                    </div>
                     <div className="flex items-center justify-center mt-3 gap-3">
                         <button onClick={handleGoogleSignIn} className="btn btn-sm">Google</button>
                         <button onClick={handleGithubSignIn} className="btn btn-sm">Github</button>
