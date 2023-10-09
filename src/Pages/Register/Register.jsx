@@ -28,15 +28,15 @@ const Register = () => {
 
         if (!/^(?=.*[A-Z]).+$/
             .test(password)) {
-            toast("Password must be One capital characters");
+            toast.error("Password must be One capital characters");
             return
         }
         if (!/^(?=.*[\W_]).+$/.test(password)) {
-            toast("Password must be One special characters");
+            toast.error("Password must be One special characters");
             return
         }
         if (!/^.{6,}$/.test(password)) {
-            toast("Password must be at least 6 characters");
+            toast.error("Password must be at least 6 characters");
             return
         }
 
