@@ -37,7 +37,7 @@ const Navbar = () => {
                             } to="/booking">Booking</NavLink></li>
                             <li className="text-[#232a34] text-lg font-normal"><NavLink className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "text-white bg-[#fcb41e] btn btn-sm font-medium underline" : ""
-                            } to="/career">Blog</NavLink></li>
+                            } to="/about">About Us</NavLink></li>
                             
                         </ul>
                     </div>
@@ -59,7 +59,7 @@ const Navbar = () => {
                         } to="/booking">Booking</NavLink></li>
                         <li className="text-[#232a34] text-lg font-normal"><NavLink className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "text-white bg-[#fcb41e] btn btn-sm font-medium underline" : ""
-                        } to="/blog">Blog</NavLink></li>
+                        } to="/about">About Us</NavLink></li>
 
                     </ul>
                 </div>
