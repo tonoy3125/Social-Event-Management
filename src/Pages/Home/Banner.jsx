@@ -23,7 +23,7 @@ const Banner = () => {
                         data-aos-easing="linear"
                         data-aos-duration="3000" className="absolute top-7 md:top-28 md:left-32 lg:top-96 lg:left-[700px]">
                         <h1 className="text-xl md:text-4xl lg:text-8xl text-center lg:text-left font-bold mb-2 md:mb-5 lg:mb-10"><span className='text-[#DE3163] tracking-wide '>We Create</span> <br /> <span className='text-[#FDFEFE]'>You celebrate</span></h1>
-                        <p className='md:text-base lg:text-base text-[#FDFEFE] font-semibold mb-5 lg:mb-10 text-center lg:text-center'>Planning a weeding, proposal, or event in our busy city is not so easy,<br /> and it takes skill(and time) to make it all look easy going</p>
+                        <p className='md:text-base lg:text-base text-[#FDFEFE] font-semibold mb-5 lg:mb-10 text-center '>Planning a weeding, proposal, or event in our busy city is not so easy,<br /> and it takes skill(and time) to make it all look easy going</p>
                         <button className='bg-[#ff635c] btn-sm rounded-lg text-white text-center ml-36 md:ml-48'>Online Request</button>
                     </div>
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
