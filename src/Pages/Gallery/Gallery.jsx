@@ -22,6 +22,7 @@ import anniversary1 from "../../assets/pic/anniversary1.jpg";
 import anniversary2 from "../../assets/pic/anniversary2.jpg";
 import anniversary3 from "../../assets/pic/anniversary3.jpg";
 import anniversary4 from "../../assets/pic/anniversary4.jpg";
+import Footer from "../Home/Footer";
 
 
 const Gallery = () => {
@@ -134,6 +135,7 @@ const Gallery = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

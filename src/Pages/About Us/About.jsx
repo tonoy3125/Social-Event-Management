@@ -1,4 +1,5 @@
 import about from "../../assets/pic/about_us.jpg";
+import Footer from "../Home/Footer";
 
 const About = () => {
     return (
@@ -18,7 +19,9 @@ const About = () => {
                 <hr className=" w-[200px] h-1 bg-[#e4336a] mx-auto mb-5" />
                 <p className="font-medium text-base ">TUI UK is one of the leading travel companies in the world, with all their holidays designed to help you Discover Your Smile. TUI UK has been a strategic partner of BookYourWeddingDay.com since day one, and are using the platform for booking wedding dates for their customers instant As a customer, when you book a wedding date through our site at a hotel/venue which is featured in TUI’s weddings program, you have the opportunity if you wish to provide TUI with your booking reference and they will be able to take your booking over and assist you with a holiday package and a wedding package as well.</p>
             </div>
+            <Footer></Footer>
         </div>
+        
     );
 };
 
