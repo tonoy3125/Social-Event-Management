@@ -1,11 +1,15 @@
 /* eslint-disable no-unused-vars */
-import { useContext } from "react";
+import { AiOutlineEye } from 'react-icons/ai';
+import { AiOutlineEyeInvisible } from 'react-icons/ai';
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 
 
+
 const Register = () => {
+    const [showPassword, setShowPassword] = useState(false)
 
     const { createUser, logOut, handleUpdateProfile, setLoading } = useContext(AuthContext);
     const navigate = useNavigate()
@@ -20,13 +24,22 @@ const Register = () => {
         console.log(name, email, password, photo, accepted)
 
 
-        if (password.length < 6) {
-            toast.error('Password must be at least 6 characters')
+
+
+        if (!/^(?=.*[A-Z]).+$/
+            .test(password)) {
+            toast("Password must be One capital characters");
             return
         }
-        else if (!accepted) {
-            toast.error('Please accepted our terms and condition')
+        if (!/^(?=.*[\W_]).+$/.test(password)) {
+            toast("Password must be One special characters");
+            return
         }
+        if (!/^.{6,}$/.test(password)) {
+            toast("Password must be at least 6 characters");
+            return
+        }
+
 
 
         createUser(email, password)
@@ -70,7 +83,14 @@ const Register = () => {
                     </div>
                     <div className="mb-6">
                         <h2 className=" text-base md:text-xl font-semibold text-[#403F3F] mb-4">Password</h2>
-                        <input className="pt-5 pb-5 pl-2 md:p-5 w-[397px] md:w-[558px] bg-[#F3F3F3] text-base font-normal text-[#9F9F9F] rounded" type="password" name="password" placeholder="Enter your password" />
+                        <div className='relative '>
+                            <input className="pt-5 pb-5 pl-2 md:p-5 w-[397px] md:w-[558px] bg-[#F3F3F3] text-base font-normal text-[#9F9F9F] rounded" type={showPassword ? "text" : "password"} name="password" placeholder="Enter your password" id="" />
+                            <span className="absolute right-4 md:right-28 top-6 rtl:left-0 rtl:right-auto " onClick={() => { setShowPassword(!showPassword) }} >
+                                {
+                                    showPassword ? <AiOutlineEyeInvisible className='text-xl'></AiOutlineEyeInvisible> : <AiOutlineEye className='text-xl'></AiOutlineEye>
+                                }
+                            </span>
+                        </div>
                     </div>
                     <div className="flex items-center gap-2 mb-7">
                         <input type="checkbox" name="terms" className="checkbox" required />

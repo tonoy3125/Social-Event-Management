@@ -5,6 +5,12 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+// import Swal from 'sweetalert2/dist/sweetalert2.js'
+
+// import 'sweetalert2/src/sweetalert2.scss'
+import swal from 'sweetalert';
 
 
 const Login = () => {
@@ -20,19 +26,30 @@ const Login = () => {
         const password = e.target.password.value;
         console.log(email, password)
 
-        if (password.length < 6) {
-            toast.error('Password must be at least 6 characters')
+        // if (password.length < 6) {
+        //     swal("Password must be at least 6 characters");
+        //     return
+        // }
+
+        if (!/^.{6,}$/.test(password)) {
+            toast.error("Password must be at least 6 characters");
             return
         }
 
 
         signIn(email, password)
             .then(result => {
+                console.log('Navigating to:', location?.state ? location.state : "/");
                 navigate(location?.state ? location.state : "/")
-                toast.success('User logged Successfully')
+                swal("Good job!", "User logged Successfully", "success");
             })
+
+
+
+
             .catch(error => {
-                toast.error("Verify Your Email")
+                const errormsg = error.message;
+                toast.error(errormsg);
                 setLoading(false)
                 e.target.reset()
             })
@@ -43,10 +60,11 @@ const Login = () => {
             .then(result => {
                 console.log(result.user)
                 navigate(location?.state ? location.state : "/")
-                toast.success('User logged Successfully')
+                swal("Good job!", "User logged Successfully", "success");
             })
             .catch(error => {
-                console.log(error)
+                const errormsg = error.message;
+                toast.error(errormsg);
             })
     }
     const handleGithubSignIn = () => {
@@ -54,10 +72,12 @@ const Login = () => {
             .then(result => {
                 console.log(result.user)
                 navigate(location?.state ? location.state : "/")
-                toast.success('User logged Successfully')
+                swal("Good job!", "User logged Successfully", "success");
+
             })
             .catch(error => {
-                console.log(error)
+                const errormsg = error.message;
+                toast.error(errormsg);
             })
     }
 
@@ -68,7 +88,7 @@ const Login = () => {
     return (
         <div className="bg-[#F3F3F3]">
             <div className="container mx-auto pt-9 pb-[180px]">
-                <div className=" w-[400px] md:w-[752px] h-[750px] mx-auto bg-[#fff] rounded-md pt-10 md:pt-[76px]">
+                <div className=" w-[400px] md:w-[752px] h-[780px] mx-auto bg-[#fff] rounded-md pt-10 md:pt-[76px]">
                     <h1 className=" text-2xl md:text-4xl font-semibold text-center text-[#403F3F] ">Login Your Account</h1>
                     <hr className="md:w-[606px] h-1 mt-7 md:mt-12 mb-7 md:mb-12 mx-auto" />
                     <form onSubmit={handleLogin} className="md:pl-24">
@@ -96,14 +116,14 @@ const Login = () => {
 
                     </form>
                     <p className="text-center mt-7"><span className="text-base font-semibold text-[#706F6F]">Dont’t Have An Account ? </span><Link className="text-base font-semibold text-[#F75B5F]" to="/register">Register</Link></p>
-                    <div className="w-full flex items-center justify-between py-5">
-                        <hr className="w-full bg-gray-400" />
+                    <div className="w-full flex items-center justify-between  lg:px-24 mt-4">
+                        <hr className="w-full h-[3px] bg-gray-400" />
                         <p className="text-base font-medium leading-4 px-2.5 text-gray-400">OR</p>
-                        <hr className="w-full bg-gray-400  " />
+                        <hr className="w-full h-[3px] bg-gray-400  " />
                     </div>
-                    <div className="flex items-center justify-center mt-3 gap-3">
-                        <button onClick={handleGoogleSignIn} className="btn btn-sm">Google</button>
-                        <button onClick={handleGithubSignIn} className="btn btn-sm">Github</button>
+                    <div className="flex items-center justify-center mt-5 gap-7">
+                        <button onClick={handleGoogleSignIn} className="bg-[#403F3F] rounded text-white btn-sm">Google</button>
+                        <button onClick={handleGithubSignIn} className="bg-[#403F3F] rounded text-white btn-sm">Github</button>
                     </div>
                 </div>
             </div>
