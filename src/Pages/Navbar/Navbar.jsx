@@ -34,13 +34,11 @@ const Navbar = () => {
                             } to="/">Home</NavLink></li>
                             <li className="text-[#232a34] text-lg font-normal"><NavLink className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "text-white bg-[#fcb41e] btn btn-sm font-medium underline" : ""
-                            } to="/about">About</NavLink></li>
+                            } to="/booking">Booking</NavLink></li>
                             <li className="text-[#232a34] text-lg font-normal"><NavLink className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "text-white bg-[#fcb41e] btn btn-sm font-medium underline" : ""
                             } to="/career">Blog</NavLink></li>
-                            <li className="text-[#232a34] text-lg font-normal"><NavLink className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "text-white bg-[#fcb41e] btn btn-sm font-medium underline" : ""
-                            } to="/career">Blog</NavLink></li>
+                            
                         </ul>
                     </div>
                     <div className="ml-14 md:ml-0 ">
@@ -58,7 +56,7 @@ const Navbar = () => {
                         } to="/gallery">Gallery</NavLink></li>
                         <li className="text-[#232a34] text-lg font-normal"><NavLink className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "text-white bg-[#fcb41e] btn btn-sm font-medium underline" : ""
-                        } to="/about">About</NavLink></li>
+                        } to="/booking">Booking</NavLink></li>
                         <li className="text-[#232a34] text-lg font-normal"><NavLink className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "text-white bg-[#fcb41e] btn btn-sm font-medium underline" : ""
                         } to="/blog">Blog</NavLink></li>

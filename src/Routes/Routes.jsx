@@ -7,6 +7,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Gallery from "../Pages/Gallery/Gallery";
 import PrivateRoute from "./PrivateRoute";
+import Booking from "../Pages/Booking/Booking";
 
 
 
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: "/gallery",
                 element: <PrivateRoute><Gallery></Gallery></PrivateRoute>
+            },
+            {
+                path: "/booking",
+                element: <PrivateRoute><Booking></Booking></PrivateRoute>
             },
             {
                 path: "/login",

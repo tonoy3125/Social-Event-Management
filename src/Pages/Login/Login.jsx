@@ -96,14 +96,10 @@ const Login = () => {
 
                     </form>
                     <p className="text-center mt-7"><span className="text-base font-semibold text-[#706F6F]">Dont’t Have An Account ? </span><Link className="text-base font-semibold text-[#F75B5F]" to="/register">Register</Link></p>
-                    <div className="flex items-center justify-between mt-4">
-                        <span className="w-1/5 border-b dark:border-gray-600 lg:w-1/5"></span>
-
-                        <a href="#" className="text-xs text-center text-gray-500 uppercase dark:text-gray-400 hover:underline">
-                            or login with Social Media
-                        </a>
-
-                        <span className="w-1/5 border-b dark:border-gray-400 lg:w-1/5"></span>
+                    <div className="w-full flex items-center justify-between py-5">
+                        <hr className="w-full bg-gray-400" />
+                        <p className="text-base font-medium leading-4 px-2.5 text-gray-400">OR</p>
+                        <hr className="w-full bg-gray-400  " />
                     </div>
                     <div className="flex items-center justify-center mt-3 gap-3">
                         <button onClick={handleGoogleSignIn} className="btn btn-sm">Google</button>
