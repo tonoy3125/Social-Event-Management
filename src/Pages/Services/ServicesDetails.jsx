@@ -22,7 +22,7 @@ const ServicesDetails = () => {
         <div className="bg-[#fdfcf8] mt-10">
             <div className="grid grid-cols-1  lg:grid-cols-4 container mx-auto">
                 <div className="col-span-3">
-                    <img className="w-full pr-6 pt-4 " src={service.image} alt="" />
+                    <img className="w-full  lg:pr-6 pt-4 " src={service.image} alt="" />
                     <h1 className=" text-4xl font-bold mt-3 mb-3">{service.name}</h1>
                     <p className="text-base pr-6 font-semibold">{service.long_description}</p>
                 </div>

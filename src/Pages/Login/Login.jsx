@@ -1,12 +1,15 @@
-import { useContext } from "react";
+/* eslint-disable no-unused-vars */
+import { AiOutlineEye } from 'react-icons/ai';
+import { AiOutlineEyeInvisible } from 'react-icons/ai';
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
 
 
 const Login = () => {
-
-    const { signIn, setLoading } = useContext(AuthContext)
+    const [showPassword, setShowPassword] = useState(false)
+    const { signIn, setLoading, signInWithGoogle, signInWithGithub } = useContext(AuthContext)
     const location = useLocation()
     console.log(location)
     const navigate = useNavigate()
@@ -16,6 +19,11 @@ const Login = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password)
+
+        if (password.length < 6) {
+            toast.error('Password must be at least 6 characters')
+            return
+        }
 
 
         signIn(email, password)
@@ -27,6 +35,29 @@ const Login = () => {
                 toast.error("Verify Your Email")
                 setLoading(false)
                 e.target.reset()
+            })
+    }
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then(result => {
+                console.log(result.user)
+                navigate(location?.state ? location.state : "/")
+                toast.success('User logged Successfully')
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+    const handleGithubSignIn = () => {
+        signInWithGithub()
+            .then(result => {
+                console.log(result.user)
+                navigate(location?.state ? location.state : "/")
+                toast.success('User logged Successfully')
+            })
+            .catch(error => {
+                console.log(error)
             })
     }
 
@@ -47,7 +78,14 @@ const Login = () => {
                         </div>
                         <div className="mb-6">
                             <h2 className=" text-base md:text-xl font-semibold text-[#403F3F] mb-4">Password</h2>
-                            <input className="pt-5 pb-5 pl-2 md:p-5 w-[397px] md:w-[558px] bg-[#F3F3F3] text-base font-normal text-[#9F9F9F] rounded" type="password" name="password" placeholder="Enter your password" id="" />
+                            <div className='relative '>
+                                <input className="pt-5 pb-5 pl-2 md:p-5 w-[397px] md:w-[558px] bg-[#F3F3F3] text-base font-normal text-[#9F9F9F] rounded" type={showPassword ? "text" : "password"} name="password" placeholder="Enter your password" id="" />
+                                <span className="absolute right-4 md:right-28 top-6 rtl:left-0 rtl:right-auto " onClick={() => { setShowPassword(!showPassword) }} >
+                                    {
+                                        showPassword ? <AiOutlineEyeInvisible className='text-xl'></AiOutlineEyeInvisible> : <AiOutlineEye className='text-xl'></AiOutlineEye>
+                                    }
+                                </span>
+                            </div>
                             <label className="label mt-1">
                                 <a href="#" className="label-text-alt link link-hover text-base md:text-xl">Forgot password?</a>
                             </label>
@@ -58,6 +96,10 @@ const Login = () => {
 
                     </form>
                     <p className="text-center mt-7"><span className="text-base font-semibold text-[#706F6F]">Dont’t Have An Account ? </span><Link className="text-base font-semibold text-[#F75B5F]" to="/register">Register</Link></p>
+                    <div className="flex items-center justify-center mt-3 gap-3">
+                        <button onClick={handleGoogleSignIn} className="btn btn-sm">Google</button>
+                        <button onClick={handleGithubSignIn} className="btn btn-sm">Github</button>
+                    </div>
                 </div>
             </div>
             <Toaster />
